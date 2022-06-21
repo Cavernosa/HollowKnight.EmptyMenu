@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<!-- Change this to the path of your modded HK installation -->
+		<HollowKnightRefs>hollow_knight_Data/Managed</HollowKnightRefs>
+		<!-- Change this to the path where you want the ready-to-upload exports to be -->
+		<ExportDir>./Exports/</ExportDir>
+		<!-- Uncomment this to generate a documentation file to be included with the mod -->
+		<!--<DocumentationFile>$(OutputPath)/$(AssemblyTitle).xml</DocumentationFile>-->
+	</PropertyGroup>
+	<PropertyGroup>
+		<RootNamespace>MenuTestMod</RootNamespace>
+		<AssemblyName>MenuTestMod</AssemblyName>
+		<TargetFramework>net472</TargetFramework>
+		<AssemblyTitle>MenuTestMod</AssemblyTitle>
+		<Product>MenuTestMod</Product>
+		<Description>A Hollow Knight Mod</Description>
+		<Copyright>Copyright ©  2022</Copyright>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+	<Target Name="CopyMod" AfterTargets="PostBuildEvent">
+		<RemoveDir Condition="Exists('$(ExportDir)/$(TargetName)/')" Directories="$(ExportDir)/$(TargetName)/" />
+		<MakeDir Directories="$(ExportDir)/$(TargetName)/" />
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ExportDir)/$(TargetName)/" />
+
+	</Target>
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>$(HollowKnightRefs)/Assembly-CSharp.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>
