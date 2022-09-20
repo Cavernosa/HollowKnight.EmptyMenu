@@ -21,7 +21,8 @@ The code is very simple, assembled together from these sources:
 ## Usage
 1. Install the `EmptyMenu` mod in [Scarab](https://github.com/fifty-six/Scarab)
 * _Theres also a build in the Releases if you want to install manually_
-2. The empty menu is found in "Main Menu" > Options > Mods > "MenuTestMod Options"
+2. Open the game. It should show "MenuTestMod" as installed
+3. The empty menu is found in "Main Menu" > Options > Mods > "MenuTestMod Options"
 
 ## Build
 1. Get something to build C#. I use dotnet-sdk (available in most distros)
@@ -32,4 +33,4 @@ The code is very simple, assembled together from these sources:
 The built dll will be in `Exports/MenuTestMod/`
 
 ## Contributing
-Don't be shy and send those PRs
+PRs are very appreciated
