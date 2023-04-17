@@ -1,22 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<!-- Change this to the path of your modded HK installation -->
-		<HollowKnightRefs>hollow_knight_Data/Managed</HollowKnightRefs>
+		<HollowKnightRefs>cs-hk-data</HollowKnightRefs>
 		<!-- Change this to the path where you want the ready-to-upload exports to be -->
 		<ExportDir>./Exports/</ExportDir>
 		<!-- Uncomment this to generate a documentation file to be included with the mod -->
 		<!--<DocumentationFile>$(OutputPath)/$(AssemblyTitle).xml</DocumentationFile>-->
 	</PropertyGroup>
 	<PropertyGroup>
-		<RootNamespace>MenuTestMod</RootNamespace>
-		<AssemblyName>MenuTestMod</AssemblyName>
+		<AssemblyName>EmptyMenu</AssemblyName>
 		<TargetFramework>net472</TargetFramework>
-		<AssemblyTitle>MenuTestMod</AssemblyTitle>
-		<Product>MenuTestMod</Product>
-		<Description>A Hollow Knight Mod</Description>
-		<Copyright>Copyright ©  2022</Copyright>
-		<AssemblyVersion>1.0.0.0</AssemblyVersion>
-		<FileVersion>1.0.0.0</FileVersion>
+		<AssemblyTitle>EmptyMenu</AssemblyTitle>
+		<AssemblyVersion>1.1</AssemblyVersion>
+		<Version>1.1</Version>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
 		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
@@ -29,6 +25,9 @@
 	<ItemGroup>
 		<Reference Include="Assembly-CSharp">
 			<HintPath>$(HollowKnightRefs)/Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+			<HintPath>$(HollowKnightRefs)/UnityEngine.CoreModule.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>
