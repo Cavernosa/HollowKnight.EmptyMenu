@@ -14,7 +14,8 @@ Install the `EmptyMenu` mod in [Scarab](https://github.com/fifty-six/Scarab), or
 
 ## Usage
 The empty menu is found in "Main Menu" > Options > Mods > "EmptyMenu Options"
-To go back, press BACK or SUBMIT (in a keyboard, Escape or Enter)
+
+To go back, press BACK or SUBMIT (Escape or Enter in a keyboard)
 
 ## Build
 1. Get something to build C#. I use dotnet-sdk (available in most distros repos)
